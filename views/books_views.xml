@@ -30,13 +30,6 @@
         <field name="model">product.template</field>
         <field name="arch" type="xml">
             <tree string="Books">
-<<<<<<< HEAD
-=======
-                <header>
-                    <button string="Add Book" type="action" name="%(action_add_book_wizard)d" class="btn-primary"/>
-                </header>
->>>>>>> d7ee5d7d75a7e9cc232429838aaef6d127c0b4d1
-                <field name="isbn" />
                 <field name="title" />
                 <field name="author" />
                 <field name="publication_date" />
