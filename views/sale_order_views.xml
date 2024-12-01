@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <record id="view_sale_order_form_inherit" model="ir.ui.view">
+            <field name="name">store.store.sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='sale_header']" position="inside">
+                    <group name="booking_details">
+                        <field name="is_book" invisible="True"/>
+                        <field name="is_paid_or_in_payment" invisible="True"/>
+                        <field name="book_id" invisible="True"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

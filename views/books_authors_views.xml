@@ -1,0 +1,59 @@
+<odoo>
+
+        <record id="view_res_partner_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Author Info">
+                        <group string="Personal Information">
+                            <field name="nationality" invisible="False"/>
+                            <field name="place_of_birth" invisible="False"/>
+                            <field name="date_of_birth" invisible="False"/>
+                            <field name="occupation" invisible="False"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_res_partner_tree_inherit" model="ir.ui.view">
+            <field name="name">res.partner.tree.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="inside">
+                    <field name="nationality" invisible="False"/>
+                    <field name="place_of_birth" invisible="False"/>
+                    <field name="date_of_birth" invisible="False"/>
+                    <field name="occupation" invisible="False"/>
+                </xpath>
+            </field>
+        </record>
+
+ 
+    <record id="view_books_search" model="ir.ui.view">
+        <field name="name">res.partner.search</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="nationality"/>
+                <field name="place_of_birth"/>
+                <field name="date_of_birth"/>
+                <field name="occupation"/>
+            </search>
+        </field>
+    </record>
+        
+
+       
+        <record id="action_authors" model="ir.actions.act_window">
+            <field name="name">Partners</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">form,tree</field>
+            <field name="view_id" ref="view_res_partner_tree_inherit"/>
+        </record>
+
+ 
+</odoo>
