@@ -1,0 +1,15 @@
+<odoo>
+   
+    <menuitem id="menu_library_management" name="Library Management" sequence="10"/>
+
+  
+    <menuitem id="menu_books" name="Books" parent="menu_library_management" action="action_books" sequence="10"/>
+
+   
+    <menuitem id="menu_authors" name="Authors" parent="menu_library_management" action="action_authors" sequence="20"/>
+
+
+    <menuitem id="menu_books_category" name="Categories" parent="menu_library_management" action="action_books_category" sequence="30"/>
+
+    <menuitem id="menu_add_book_wizard" name="Add Book" parent="menu_library_management" action="action_add_book_wizard" sequence="40"/>
+</odoo>

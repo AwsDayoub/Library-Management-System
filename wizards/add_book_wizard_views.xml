@@ -1,0 +1,31 @@
+<odoo>
+    <record id="view_add_book_wizard" model="ir.ui.view">
+        <field name="name">add.book.wizard.form</field>
+        <field name="model">add.book.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Add Books">
+                <group>
+                    <field name="title"/>
+                    <field name="isbn"/>
+                    <field name="publication_date"/>
+                    <field name="category_selection" string="Category"/>
+                    <field name="author_id"/>
+                    <field name="number_of_copies"/>
+                </group>
+                <footer>
+                    <button string="Create Book" type="object" name="create_books" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_add_book_wizard" model="ir.actions.act_window">
+        <field name="name">Add Book</field>
+        <field name="res_model">add.book.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="view_add_book_wizard"/>
+    </record>
+
+</odoo>

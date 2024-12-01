@@ -1,0 +1,47 @@
+<odoo>
+  
+    <record id="view_books_category_tree" model="ir.ui.view">
+        <field name="name">books.category.tree</field>
+        <field name="model">books.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="view_books_category_search" model="ir.ui.view">
+        <field name="name">books.category.search</field>
+        <field name="model">books.category</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_books_category_form" model="ir.ui.view">
+        <field name="name">books.category.form</field>
+        <field name="model">books.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" string="Category Name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_books_category" model="ir.actions.act_window">
+        <field name="name">Categories</field>
+        <field name="res_model">books.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_books_category_tree"/>
+    </record>
+
+ 
+</odoo>

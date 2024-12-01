@@ -1,0 +1,67 @@
+<odoo>
+
+    <record id="inherit_product_template_form_view_a" model="ir.ui.view">
+        <field name="name">product.template.service.facility.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='purchase']" position="after">
+                <page name="book configuration" string="Book Configuration">
+                    <group col="2">
+                        <group>
+                            <field name="isbn" string="ISBN"/>
+                            <field name="title" string="Title"/>
+                            <field name="author" string="Author"/>
+                        </group>
+                        <group>
+                            <field name="publication_date" string="Publication Date"/>
+                            <field name="category_selection" string="Category"/>
+                            <field name="number_of_copies" string="Number Of Copies"/>
+                            <field name="status" string="Status"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_books_tree" model="ir.ui.view">
+        <field name="name">books.tree</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <tree string="Books">
+                <field name="isbn" />
+                <field name="title" />
+                <field name="author" />
+                <field name="publication_date" />
+                <field name="status" />
+                <field name="number_of_copies" />
+            </tree>
+        </field>
+    </record>
+
+ 
+    <record id="view_books_search" model="ir.ui.view">
+        <field name="name">books.search</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="isbn" />
+                <field name="title" />
+                <field name="author" />
+                <field name="publication_date" />
+                <field name="status" />
+                <field name="number_of_copies" />
+            </search>
+        </field>
+    </record>
+
+    <record id="action_books" model="ir.actions.act_window">
+        <field name="name">Books</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_books_tree"/>
+    </record>
+
+
+</odoo>

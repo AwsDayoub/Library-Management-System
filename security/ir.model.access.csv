@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_books_library_manager,access.books.library_manager,model_product_template,group_library_manager,1,1,1,1
+access_books_librarian,access.books.librarian,model_product_template,group_librarian,1,0,0,0
+
+access_books_authors_library_manager,access.books.authors.library_manager,model_res_partner,group_library_manager,1,1,1,1
+access_books_authors_librarian,access.books.authors.librarian,model_res_partner,group_librarian,1,0,0,0
+
+access_books_category_library_manager,access.books.category.library.manager,model_books_category,group_library_manager,1,1,1,1
+access_books_category_librarian,access.books.category.librarian,model_books_category,group_librarian,1,0,0,0
+
+access_add_book_wizard_library_manager,access.add.book.wizard.library.manager,model_add_book_wizard,group_library_manager,1,1,1,1
+access_add_book_wizard_librarian,access.add.book.wizard.librarian,model_add_book_wizard,group_librarian,1,0,0,0

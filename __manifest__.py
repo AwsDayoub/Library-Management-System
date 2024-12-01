@@ -1,0 +1,21 @@
+{
+    'name': 'Library Management System',
+    'version': '1.0',
+    'summary': 'Manage library books, authors, and categories',
+    'description': 'A module for managing a library system including books, authors, and categories.',
+    'author': 'Aws Dayoub',
+    'category': 'Library',
+    'depends': ['base', 'mail', 'sale'],
+    'data': [
+        'security/groups.xml',
+        'security/ir.model.access.csv',
+        'views/books_views.xml',
+        'views/books_authors_views.xml',
+        'views/books_categories_views.xml',
+        #'views/sale_order_views.xml',
+        'wizards/add_book_wizard_views.xml',
+        'views/menu_items.xml',  
+    ],
+    'installable': True,
+    'application': True,
+}
